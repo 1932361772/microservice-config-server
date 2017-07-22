@@ -1,0 +1,12 @@
+# microservice-config-server
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:1932361772/gitconfig.git
+server:
+  port: 8080
+

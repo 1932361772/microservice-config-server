@@ -9,6 +9,4 @@ spring:
       server:
         git:
           uri: git@github.com:1932361772/gitconfig.git
-          username: #仓库用户名
-          password: #仓库密码
 

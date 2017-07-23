@@ -1,0 +1,18 @@
+# microservice-config-server 模式匹配
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:1932361772/gitconfig.git #公用 #http://localhost:8080/special-default.yml,http://localhost:8080/foobar-default.yml,http://localhost:8080/foobar-dev.yml.
+          repos:
+            simple: git@github.com:1932361772/simple  #http://localhost:8080/simple-dev.yml
+            special:
+              pattern: special*/dev*,special*/test*
+              uri: git@github.com:1932361772/special #有x仍然可用. #http://localhost:8080/special-dev.yml,http://localhost:8080/special-test.yml
+          clone-on-start: true # 默认false,在首次请求的时候才去下载.true时,启动时就下载.
+             

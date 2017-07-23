@@ -1,0 +1,12 @@
+# microservice-config-server 通配符
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:1932361772/{application}
+server:
+  port: 8080
+
